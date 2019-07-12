@@ -1,0 +1,10 @@
+.list-group{
+    margin-top:10px;
+}
+
+.task-header{
+    background-color: #282c34;
+    font-weight:bold;
+    color:#fff;
+    font-size:large;
+}
