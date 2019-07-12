@@ -1,0 +1,7 @@
+.input-group{
+    border:1px solid #eee;
+    margin-top:10px;
+}
+.input-group input[type="text"]{
+    border:0;
+}

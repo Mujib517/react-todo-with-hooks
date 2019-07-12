@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Todo from './Todo';
+import NewTodo from './NewTodo';
 import './todoList.css';
 
 export default () => {
@@ -19,11 +20,17 @@ export default () => {
         updateTasks(newTasks);
     };
 
-    return (
+    const addTodo = (task) => {
+        updateTasks([...tasks, task])
+    };
+
+    return (<>
+        <NewTodo onSubmit={addTodo}/>
         <div className="list-group">
             <div className="list-group-item task-header">
                 Tasks
             </div>
             {tasks.map(task => <Todo key={task.id} task={task} onUpdate={update}/>)}
-        </div>)
+        </div>
+    </>)
 }
